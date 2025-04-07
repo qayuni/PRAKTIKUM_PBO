@@ -5,14 +5,18 @@ public class Paket {
     private String deskripsi;
     private double berat;
     private String jenisBarang;
-    private int idPengguna;
+    public int idPengguna;
+    private double totalBiaya;
+    private String alamat;
 
-    public Paket(int id, String deskripsi, double berat, String jenisBarang, int idPengguna) {
+    public Paket(int id, String deskripsi, double berat, String jenisBarang, int idPengguna, double totalBiaya, String alamat) {
         this.id = id;
         this.deskripsi = deskripsi;
         this.berat = berat;
         this.jenisBarang = jenisBarang;
         this.idPengguna = idPengguna;
+        this.totalBiaya = totalBiaya;
+        this.alamat = alamat;
     }
 
     public int getId() {
@@ -35,26 +39,11 @@ public class Paket {
         return idPengguna;
     }
 
-    public void setDeskripsi(String deskripsi) {
-        this.deskripsi = deskripsi;
+    public double getTotalBiaya() {
+        return totalBiaya;
     }
-
-    public void setBerat(double berat) {
-        this.berat = berat;
-    }
-
-    public void setJenisBarang(String jenisBarang) {
-        this.jenisBarang = jenisBarang;
-    }
-
-    @Override
-    public String toString() {
-        return "Paket{" +
-                "id=" + id +
-                ", deskripsi='" + deskripsi + '\'' +
-                ", berat=" + berat +
-                ", jenisBarang='" + jenisBarang + '\'' +
-                ", idPengguna=" + idPengguna +
-                '}';
+    
+    public String getAlamat(){
+        return alamat;
     }
 }

@@ -1,8 +1,8 @@
 package model;
 
 public class Pengguna {
-    private int id;
-    private String nama;
+    protected int id;
+    protected String nama;
     private String email;
     private String password;
 
@@ -25,12 +25,12 @@ public class Pengguna {
         return email;
     }
 
-    public String getPassword() {
+    public String getPassword() { 
         return password;
     }
-    
+
     public void setNama(String nama) {
-    this.nama = nama;
+        this.nama = nama;
     }
 
     @Override
